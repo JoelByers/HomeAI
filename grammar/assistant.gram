@@ -1,0 +1,14 @@
+#JSGF V1.0;
+
+grammar assistant;
+
+<polite> = please | would you | could you;
+<bool> = on | off;
+<ask> = what;
+<greet> = hello | hey;
+<name> = neil;
+
+public <phrases> = <greet>* <name> <questions>* <polite>*;
+        <questions> = <ask>* <time>*;
+        <time> = time;
+

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+
+grammar test;
+
+//public <miscellaneous> = quit;
+//public <quitFilter> = (it | lit | bit | pit | sit | fit | hit | kit | knit | mit);
+
+<polite> = please | would you | could you;
+<bool> = on | off;
+<ask> = what;
+<greet> = hello;
+<names> = neil;
+
+public <jarvis> = <greet>* <names> <questions>* <polite>* <commands>* <polite>*;
+       <commands> = <lights>;
+       <questions> = <ask>* <time>*;
+       <lights> = turn* <bool> the* lights | lights <bool>;
+       <time> = time;

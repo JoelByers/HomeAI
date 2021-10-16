@@ -77,14 +77,23 @@
 			"xutility": "cpp"
 		},
 		"java.project.sourcePaths": [
-			"src"
+			"Server\\src",
+			"Client\\src"
 		],
-		"java.project.referencedLibraries": [
-			"lib/**/*.jar",
-			"marytts-builder-5.2\\lib\\marytts-builder-5.2-jar-with-dependencies.jar",
-			"marytts-builder-5.2/lib/marytts-lang-en-5.2.jar",
-			"voice-cmu-bdl-hsmm-5.2/lib/voice-cmu-bdl-hsmm-5.2.jar",
-			"voce-0.9.1\\lib\\voce.jar"
-		]
+		"java.project.referencedLibraries": {
+			"include": [
+				"lib/**/*.jar",
+				"marytts-builder-5.2\\lib\\marytts-builder-5.2-jar-with-dependencies.jar",
+				"voce-0.9.1\\lib\\voce.jar",
+				"Server\\marytts-builder-5.2\\lib\\marytts-builder-5.2-jar-with-dependencies.jar",
+				"Server\\marytts-builder-5.2\\lib\\marytts-lang-en-5.2.jar",
+				"Server\\voce-0.9.1\\lib\\voce.jar",
+				"Server\\voice-cmu-bdl-hsmm-5.2\\lib\\voice-cmu-bdl-hsmm-5.2.jar"
+			],
+			"exclude": [
+				"marytts-builder-5.2/lib/marytts-builder-5.2-jar-with-dependencies.jar",
+				"voce-0.9.1/lib/voce.jar"
+			]
+		}
 	}
 }

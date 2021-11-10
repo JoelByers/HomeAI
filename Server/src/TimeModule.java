@@ -1,3 +1,5 @@
+package Server.src;
+
 import java.time.LocalTime;
 
 public class TimeModule extends Module

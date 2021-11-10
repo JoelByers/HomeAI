@@ -1,3 +1,5 @@
+package Server.src;
+
 import marytts.MaryInterface;
 import marytts.exceptions.MaryConfigurationException;
 import marytts.exceptions.SynthesisException;

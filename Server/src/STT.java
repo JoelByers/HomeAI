@@ -1,9 +1,11 @@
+package Server.src;
+
 public class STT extends Thread
 {
     public STT()
     {
-        voce.SpeechInterface.init("Server/voce-0.9.1/lib", 
-        false, true, "Server/grammar", "assistant"); 
+        voce.SpeechInterface.init("./", 
+        false, true, "./", "assistant"); 
 
         this.start();
     }

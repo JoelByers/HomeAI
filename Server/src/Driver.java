@@ -6,10 +6,10 @@ public class Driver
 {
     public static void main(String[] args)
     {   
-
         TimeModule timeMod = new TimeModule("time");
         GreetModule greetMod = new GreetModule("hello");
         StoryModule storyMod = new StoryModule("story");
+        Globals.jobProcessor.pushJob(new SpeakFileJob("speechText/startup.txt"));
 
         ServerProcessor server = new ServerProcessor();
 

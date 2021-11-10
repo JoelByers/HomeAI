@@ -6,7 +6,7 @@ grammar assistant;
 <bool> = on | off;
 <ask> = what;
 <greet> = hello | hey;
-<name> = neil;
+<name> = boris;
 
 public <phrases> = <greet>* <name> <questions>* <polite>*;
         <questions> = <ask>* <time>*;

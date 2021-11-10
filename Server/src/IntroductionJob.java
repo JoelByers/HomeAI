@@ -20,7 +20,6 @@ public class IntroductionJob extends Job
     {
         Globals.systemAudio.speak("Hello, my name is " + Globals.voiceName + ", the artificial intelligence created to serve the starship bushfire.");
         Globals.systemAudio.speak("My systems are online and standing by, ready to assist with operations");
-        Globals.systemAudio.speak("Gahl Dang");
 
         return false;
     }

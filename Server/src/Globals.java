@@ -12,5 +12,5 @@ public class Globals
     public static boolean shutdown = false;
 
     // String Constants
-    public final static String voiceName = "Neil";
+    public final static String voiceName = "Boris";
 }

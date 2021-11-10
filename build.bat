@@ -10,6 +10,7 @@ javac -classpath "Server\*" Server\src\*.java
 jar cfm Builds\Server.jar Server\Manifest.txt Server\src\*.class
 copy Server\voce.config.xml Builds
 copy Server\grammar Builds
+copy Server\speechText Builds\speechText
 javac -classpath Client\lib\* Client\src\*.java
 jar cfm Builds\Client.jar Client\Manifest.txt Client\src\*.class
 @echo off

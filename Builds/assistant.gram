@@ -9,6 +9,7 @@ grammar assistant;
 <name> = boris;
 
 public <phrases> = <greet>* <name> <questions>* <polite>*;
-        <questions> = <ask>* <time>*;
+        <questions> = <ask>* <time>* <story>*;
         <time> = time;
+        <story> = story;
 

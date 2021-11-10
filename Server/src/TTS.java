@@ -6,6 +6,8 @@ import marytts.exceptions.SynthesisException;
 import marytts.signalproc.effects.AudioEffect;
 import marytts.signalproc.effects.EffectsApplier;
 import marytts.util.data.audio.AudioPlayer;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import javax.sound.sampled.AudioInputStream;
 
@@ -49,24 +51,26 @@ public class TTS
 
         return outputStream;
     }
-/*
-    public void speak(String text)
+
+    public AudioInputStream readFromFile(String file)
     {
-        try(AudioInputStream audioStream = mary.generateAudio(text))
+        String nextLine = "";
+        String output = "";
+
+        try
         {
-            //AudioInputStream effectSream = effects.apply(audioStream, robotEffect);
-            AudioPlayer player = new AudioPlayer(audioStream);
-            player.start();
-            
-        }
-        catch(SynthesisException exc)
-        {
-            exc.printStackTrace();
+            BufferedReader fileIn = new BufferedReader(new FileReader(file));
+
+            while((nextLine = fileIn.readLine()) != null)
+            {
+                output += nextLine;
+            }
         }
         catch(IOException exc)
         {
             exc.printStackTrace();
         }
+
+        return convertText(output);
     }
-    */
 }

@@ -84,4 +84,9 @@ public class AudioController extends Thread
     {
         queueStream(tts.convertText(text));
     }
+
+    public void speakFromFile(String file)
+    {
+        queueStream(tts.readFromFile(file));
+    }
 }

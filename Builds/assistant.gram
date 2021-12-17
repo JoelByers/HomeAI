@@ -5,10 +5,11 @@ grammar assistant;
 <polite> = please | would you | could you;
 <bool> = on | off;
 <ask> = what;
-<greet> = hello | hey;
+//<greet> = hello | hey;
 <name> = boris;
+<entry> = ok;
 
-public <phrases> = <greet>* <name> <questions>* <polite>*;
+public <phrases> = <entry> <name> <questions>* <polite>*;
         <questions> = <ask>* <time>* <story>*;
         <time> = time;
         <story> = story;

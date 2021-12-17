@@ -1,0 +1,1 @@
+javac -classpath "jSerialComm-2.7.0.jar" test.java

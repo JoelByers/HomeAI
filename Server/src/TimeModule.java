@@ -10,7 +10,7 @@ public class TimeModule extends Module
     }
 
     @Override
-    public void run()
+    public void run(String input)
     {
         LocalTime time = LocalTime.now();
         String out = "it is ";

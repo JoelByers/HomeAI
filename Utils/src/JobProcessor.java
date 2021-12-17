@@ -49,6 +49,7 @@ public class JobProcessor extends Thread
                 {
                     System.out.println("Processing Job");
                     processJob();
+                    System.out.println("Job Done");
                 }
     
                 Thread.sleep(3000);  // Actual Possible Implementation

@@ -91,7 +91,10 @@
 				"Server\\marytts-builder-5.2\\lib\\marytts-lang-en-5.2.jar",
 				"Server\\voce-0.9.1\\lib\\voce.jar",
 				"Server\\voice-cmu-bdl-hsmm-5.2\\lib\\voice-cmu-bdl-hsmm-5.2.jar",
-				"Server\\lib\\Utils.jar"
+				"Server\\lib\\Utils.jar",
+				"Utils\\lib\\jSerialComm-2.7.0.jar",
+				"Builds\\Utils.jar",
+				"Server\\Utils.jar"
 			],
 			"exclude": [
 				"marytts-builder-5.2/lib/marytts-builder-5.2-jar-with-dependencies.jar",

@@ -8,7 +8,7 @@ public abstract class Job extends Thread
     protected long jobID;
     public boolean runBackground;
 
-    private String command;
+    //private String command;
     private LinkedList<String> parsedCommand = new LinkedList<String>();
 
     public Job()
@@ -18,13 +18,18 @@ public abstract class Job extends Thread
         jobID = nextJobID;
         nextJobID++;
     }
-
+/*
     public Job(String inputCommand)
     {
         this();
         command = inputCommand;
     }
 
+    public String getCommand()
+    {
+        return command;
+    }
+*/
     public long getJobID()
     {
         return jobID;

@@ -8,7 +8,7 @@ public class StoryModule extends Module
     }
 
     @Override
-    public void run()
+    public void run(String input)
     {
         Globals.systemAudio.speakFromFile("./speechText/darthPlagus.txt");
     }

@@ -10,7 +10,7 @@ public class GreetModule extends Module
     }
 
     @Override
-    public void run()
+    public void run(String input)
     {
         Globals.jobProcessor.pushJob(new IntroductionJob());
     }

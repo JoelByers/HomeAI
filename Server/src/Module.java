@@ -26,7 +26,7 @@ public abstract class Module
         }   
     }
 
-    public abstract void run();
+    public abstract void run(String input);
 
     public static void searchAndRun(String input)
     {
@@ -34,7 +34,7 @@ public abstract class Module
         {
             if(allInstances.get(i).hasKey(input))
             {
-                allInstances.get(i).run();
+                allInstances.get(i).run(input);
             }
         }
     }

@@ -22,10 +22,12 @@ void loop()
   {
     digitalWrite(RLY1, HIGH);
     digitalWrite(RLY2, HIGH);   
-    delay(2000);
+  }
+
+  if(buff == 0)
+  {
     digitalWrite(RLY1, LOW);
-    digitalWrite(RLY2, LOW);   
-    buff = 0;
+    digitalWrite(RLY2, LOW);    
   }
   
   /*

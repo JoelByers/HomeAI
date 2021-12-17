@@ -9,8 +9,9 @@ grammar assistant;
 <name> = boris;
 <entry> = ok;
 
-public <phrases> = <entry> <name> <questions>* <polite>*;
-        <questions> = <ask>* <time>* <story>*;
-        <time> = time;
+public <phrases> = <entry> <name> <commands>* <polite>*;
+        <commands> = <ask>* /*<time>*/ <story>* <lights>*;
+        //<time> = time;
         <story> = story;
-
+        <lights> = lights <bool>;
+        

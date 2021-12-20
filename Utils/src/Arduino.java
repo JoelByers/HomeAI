@@ -2,7 +2,7 @@ package Utils.src;
 
 import com.fazecast.jSerialComm.SerialPort;
 
-public class Arduino
+public class Arduino implements SerialComm
 {
     private SerialPort port;
 
@@ -20,6 +20,7 @@ public class Arduino
         while(inputBuff[0] != 1);
     }
 
+    @Override
     public void write(byte[] data)
     {
         for(int i = 0; i < 10; i++)

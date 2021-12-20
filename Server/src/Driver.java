@@ -10,7 +10,7 @@ public class Driver
         GreetModule greetMod = new GreetModule("hello");
         StoryModule storyMod = new StoryModule("story");
         PowerStripModule powerMod = new PowerStripModule("lights");
-        Globals.jobProcessor.pushJob(new SpeakFileJob("speechText/startup.txt"));
+        //Globals.jobProcessor.pushJob(new SpeakFileJob("speechText/startup.txt"));
         ServerProcessor server = new ServerProcessor();
 
         while(!Globals.shutdown)

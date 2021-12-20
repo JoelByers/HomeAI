@@ -10,7 +10,6 @@ public class PowerStripModule extends Module
     @Override
     public void run(String input)
     {
-        System.out.println(input);
         Globals.jobProcessor.pushJob(new PowerStripJob(input));
     }
 }

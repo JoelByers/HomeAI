@@ -10,12 +10,6 @@ public class TestJob extends Job
     }
 
     @Override
-    public boolean parseCommand()
-    {
-        return true;
-    }
-
-    @Override
     public void initialize()
     {
         System.out.println(jobID + " Initialized");

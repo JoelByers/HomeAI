@@ -12,12 +12,6 @@ public class SpeakJob extends Job
     }
 
     @Override
-    public boolean parseCommand()
-    {
-        return false;
-    }
-
-    @Override
     public void initialize()
     {
         

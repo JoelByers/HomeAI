@@ -12,12 +12,6 @@ public class PowerStripJob extends Job
     }
 
     @Override
-    public boolean parseCommand()
-    {
-        return true;
-    }
-
-    @Override
     public void initialize()
     {
     }

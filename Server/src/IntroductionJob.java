@@ -5,12 +5,6 @@ import Utils.src.Job;
 public class IntroductionJob extends Job
 {
     @Override
-    public boolean parseCommand()
-    {
-        return true;
-    }
-
-    @Override
     public void initialize() 
     {        
     }

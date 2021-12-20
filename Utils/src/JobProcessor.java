@@ -22,20 +22,17 @@ public class JobProcessor extends Thread
     {
         Job job = jobQueue.remove();
 
-        if(job.parseCommand())
+        job.initialize();
+        while(job.process())
         {
-            job.initialize();
-            while(job.process())
-            {
-            }
-
-            if(job.runBackground)
-            {
-                job.start();  // Starts new thread with background process
-            }
-
-            job.complete();
         }
+
+        if(job.runBackground)
+        {
+            job.start();  // Starts new thread with background process
+        }
+
+        job.complete();    
     }
 
     @Override
@@ -52,7 +49,7 @@ public class JobProcessor extends Thread
                     System.out.println("Job Done");
                 }
     
-                Thread.sleep(3000);  // Actual Possible Implementation
+                Thread.sleep(3000);  // Must Pause
             }
             catch(InterruptedException exc)
             {

@@ -7,8 +7,9 @@ void setup()
 {
   pinMode(RLY1, OUTPUT);
   pinMode(RLY2, OUTPUT);
-  Serial.begin(9600);
+  buff = 0;
   Serial.write(1);
+  Serial.begin(9600);
 }
 
 void loop()
@@ -16,18 +17,17 @@ void loop()
   if(Serial.available() > 0)
   {
     buff = Serial.read();
-  }
 
-  if(buff == 1)
-  {
-    digitalWrite(RLY1, HIGH);
-    digitalWrite(RLY2, HIGH);   
-  }
-
-  if(buff == 0)
-  {
-    digitalWrite(RLY1, LOW);
-    digitalWrite(RLY2, LOW);    
+    if(buff == 1)
+    {
+      digitalWrite(RLY1, HIGH);
+      digitalWrite(RLY2, HIGH);       
+    }
+    else if(buff == 0)
+    {
+      digitalWrite(RLY1, LOW);
+      digitalWrite(RLY2, LOW);          
+    }
   }
   
   /*

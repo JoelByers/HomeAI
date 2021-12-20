@@ -10,10 +10,7 @@ public class Arduino
     {
         port = SerialPort.getCommPorts()[0];
         port.openPort();
-    }
 
-    public void write(byte[] data)
-    {
         byte inputBuff[] = new byte[]{0};
 
         do
@@ -21,10 +18,13 @@ public class Arduino
             port.readBytes(inputBuff, 1);
         }
         while(inputBuff[0] != 1);
+    }
 
+    public void write(byte[] data)
+    {
         for(int i = 0; i < 10; i++)
         {
-            port.writeBytes(new byte[]{1}, 1);
+            port.writeBytes(data, data.length);
         }
     }
 }

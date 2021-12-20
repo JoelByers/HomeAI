@@ -18,18 +18,7 @@ public abstract class Job extends Thread
         jobID = nextJobID;
         nextJobID++;
     }
-/*
-    public Job(String inputCommand)
-    {
-        this();
-        command = inputCommand;
-    }
 
-    public String getCommand()
-    {
-        return command;
-    }
-*/
     public long getJobID()
     {
         return jobID;
@@ -43,7 +32,6 @@ public abstract class Job extends Thread
         }
     }
 
-    public abstract boolean parseCommand();
     public abstract void initialize();
     public abstract boolean process();
     protected abstract boolean background();

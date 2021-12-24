@@ -15,24 +15,16 @@ public class JobProcessor extends Thread
     public void pushJob(Job job)
     {
         jobQueue.add(job);
-        System.out.println("Job " + job.getId() + " added to queue");
+        System.out.println("Job added to queue");
     } 
 
     private synchronized void processJob()
     {
         Job job = jobQueue.remove();
 
-        job.initialize();
-        while(job.process())
+        while(job.run())
         {
-        }
-
-        if(job.runBackground)
-        {
-            job.start();  // Starts new thread with background process
-        }
-
-        job.complete();    
+        }   
     }
 
     @Override

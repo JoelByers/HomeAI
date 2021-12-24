@@ -2,7 +2,7 @@ package Server.src;
 
 import Utils.src.Job;
 
-public class SpeakJob extends Job
+public class SpeakJob implements Job
 {
     String spokenText;
 
@@ -12,28 +12,9 @@ public class SpeakJob extends Job
     }
 
     @Override
-    public void initialize()
-    {
-        
-    }
-
-    @Override
-    public boolean process()
+    public boolean run()
     {
         Globals.systemAudio.speak(spokenText);
         return false;
     }
-
-    @Override
-    protected boolean background()
-    {
-        return false;
-    }
-
-    @Override
-    public void complete()
-    {
-        
-    }
-    
 }

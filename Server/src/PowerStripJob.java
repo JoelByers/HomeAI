@@ -2,7 +2,7 @@ package Server.src;
 
 import Utils.src.Job;
 
-public class PowerStripJob extends Job
+public class PowerStripJob implements Job
 {
     String command;
     String[] responses = new String[] {"So Festive",
@@ -19,12 +19,7 @@ public class PowerStripJob extends Job
     }
 
     @Override
-    public void initialize()
-    {
-    }
-
-    @Override
-    public boolean process()
+    public boolean run()
     {
         if(command.indexOf("lights on") != -1)
         {
@@ -38,17 +33,5 @@ public class PowerStripJob extends Job
         Globals.systemAudio.speak(TTS.getRandomResponse(responses));
 
         return false;
-    }
-
-    @Override
-    protected boolean background()
-    {
-        return false;
-    }
-
-    @Override
-    public void complete()
-    {
-        
     }
 }

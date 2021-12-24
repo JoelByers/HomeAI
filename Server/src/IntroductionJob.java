@@ -2,32 +2,14 @@ package Server.src;
 
 import Utils.src.Job;
 
-public class IntroductionJob extends Job
+public class IntroductionJob implements Job
 {
     @Override
-    public void initialize() 
-    {        
-    }
-
-    @Override
-    public boolean process() 
+    public boolean run() 
     {
         Globals.systemAudio.speak("Hello, my name is " + Globals.voiceName + ", the artificial intelligence created to serve the fort bushfire.");
         Globals.systemAudio.speak("My systems are online and standing by, ready to assist with operations");
 
         return false;
     }
-
-    @Override
-    protected boolean background() 
-    {
-        return false;
-    }
-
-    @Override
-    public void complete() 
-    {
-        
-    }
-    
 }

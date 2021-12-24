@@ -2,7 +2,7 @@ package Server.src;
 
 import Utils.src.Job;
 
-public class SpeakFileJob extends Job
+public class SpeakFileJob implements Job
 {
     String filePath;
 
@@ -12,28 +12,9 @@ public class SpeakFileJob extends Job
     }
 
     @Override
-    public void initialize()
-    {
-        
-    }
-
-    @Override
-    public boolean process()
+    public boolean run()
     {
         Globals.systemAudio.speakFromFile(filePath);
         return false;
     }
-
-    @Override
-    protected boolean background()
-    {
-        return false;
-    }
-
-    @Override
-    public void complete()
-    {
-        
-    }
-    
 }

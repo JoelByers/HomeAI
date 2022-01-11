@@ -12,6 +12,6 @@ grammar assistant;
 public <phrases> = <entry> <name> <commands>* <polite>*;
         <commands> = <ask>* /*<time>*/ <story>* <lights>*;
         //<time> = time;
-        <story> = story;
+        <story> = tragedy;
         <lights> = lights <bool>;
         

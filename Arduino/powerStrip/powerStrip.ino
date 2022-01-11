@@ -1,7 +1,6 @@
 #include "RelayMod.cpp"
 
 #define RLY1 2
-#define RLY2 3
 
 byte buff[2]{0};
 RelayMod* relays;
@@ -9,10 +8,9 @@ RelayMod* relays;
 void setup()
 {
   pinMode(RLY1, OUTPUT);
-  pinMode(RLY2, OUTPUT);
   relays = new RelayMod(2);
-  Serial.write(1);
   Serial.begin(9600);
+  Serial.write(1);
 }
 
 void loop()

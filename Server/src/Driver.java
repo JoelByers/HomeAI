@@ -8,6 +8,8 @@ public class Driver
 {
     public static void main(String[] args)
     {   
+        System.out.println("\nThe Borris Project");
+
         TimeModule timeMod = new TimeModule("time");
         GreetModule greetMod = new GreetModule("hello");
         StoryModule storyMod = new StoryModule("story");
@@ -23,7 +25,7 @@ public class Driver
             }
         });
 
-        //Globals.jobProcessor.pushJob(new IntroductionJob());
+        Globals.jobProcessor.pushJob(new IntroductionJob());
         ServerProcessor server = new ServerProcessor();
 
         while(!Globals.shutdown)

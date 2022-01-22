@@ -7,6 +7,7 @@ public abstract class Module
 {
     private static List<Module> allInstances = new LinkedList<Module>();
     private String keyWord;
+    private static final String entryPhrase = "ok boris ";
     
     public Module(String key)
     {
@@ -16,7 +17,7 @@ public abstract class Module
 
     public final boolean hasKey(String input)
     {
-        if(input.indexOf(keyWord) != -1)
+        if(input.indexOf(entryPhrase + keyWord) != -1)
         {
             return true;
         }

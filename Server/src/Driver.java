@@ -8,7 +8,7 @@ public class Driver
 {
     public static void main(String[] args)
     {   
-        System.out.println("\nThe Borris Project\nV1.0\n\n");
+        System.out.println("\nThe Boris Project\nV1.0\n\n");
 
         TimeModule timeMod = new TimeModule("time");
         GreetModule greetMod = new GreetModule("hello");

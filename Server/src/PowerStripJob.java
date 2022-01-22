@@ -21,11 +21,11 @@ public class PowerStripJob implements Job
     @Override
     public boolean run()
     {
-        if(command.indexOf("lights on") != -1)
+        if(command.indexOf("lights") != -1 && command.indexOf("on") != -1)
         {
             HardwareInterface.powerStrip.write((byte) 0, (byte)1);
         }
-        else if(command.indexOf("lights off") != -1)
+        else if(command.indexOf("lights") != -1 && command.indexOf("off") != -1)
         {
             HardwareInterface.powerStrip.write((byte) 0, (byte)0);
         }

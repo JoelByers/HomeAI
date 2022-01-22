@@ -1,0 +1,11 @@
+#JSGF V1.0;
+
+grammar boris;
+
+<key> = ok boris;
+<bool> = on | off;
+
+public <commands> = <key>* (lights <bool>
+                    | tell us a story
+                    | lights <bool>
+                    | what time is it);

@@ -12,7 +12,7 @@ public class Driver
 
         TimeModule timeMod = new TimeModule("time");
         GreetModule greetMod = new GreetModule("hello");
-        StoryModule storyMod = new StoryModule("tragedy");
+        StoryModule storyMod = new StoryModule("story");
         PowerStripModule powerMod = new PowerStripModule("lights");
         //Globals.jobProcessor.pushJob(new SpeakFileJob("speechText/startup.txt"));
 
@@ -27,7 +27,11 @@ public class Driver
             }
         });
 */
-        Globals.jobProcessor.pushJob(new IntroductionJob());
+        if(args.length > 0 && args[0] == "!debug" || args.length == 0)
+        {
+            Globals.jobProcessor.pushJob(new IntroductionJob());
+        }
+
         ServerProcessor server = new ServerProcessor();
 
         while(!Globals.shutdown)

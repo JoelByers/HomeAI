@@ -5,7 +5,7 @@ public class STT extends Thread
     public STT()
     {
         voce.SpeechInterface.init("./", 
-        false, true, "./", "assistant"); 
+        false, true, "./", "boris"); 
 
         this.start();
     }

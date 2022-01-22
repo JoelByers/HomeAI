@@ -3,9 +3,8 @@
 grammar boris;
 
 <key> = ok boris;
-<bool> = on | off;
 
-public <commands> = <key>* (lights <bool>
+public <commands> = <key>* (shut off the lights
                     | tell us a story
-                    | lights <bool>
+                    | turn on the lights
                     | what time is it);

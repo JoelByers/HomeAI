@@ -17,7 +17,8 @@ public abstract class Module
 
     public final boolean hasKey(String input)
     {
-        if(input.indexOf(entryPhrase + keyWord) != -1)
+        if(input.indexOf(entryPhrase) != -1
+            && input.indexOf(keyWord) != -1)
         {
             return true;
         }
